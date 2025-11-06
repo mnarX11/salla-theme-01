@@ -1,0 +1,59 @@
+<section class="hero-banner" style="padding: 80px 20px; text-align: center;">
+  <img src="{{ section.settings.banner_image | image_url }}" alt="Banner" style="max-width: 100%; border-radius: 15px; margin-bottom: 20px;">
+
+  <h2 style="font-size: 2.5rem; margin: 10px 0;">
+    {{ section.settings.banner_title }}
+  </h2>
+
+  <p style="font-size: 1.2rem; margin-bottom: 20px;">
+    {{ section.settings.banner_subtitle }}
+  </p>
+
+  {% if section.settings.button_text != blank %}
+  <a href="{{ section.settings.button_link }}" style="padding: 15px 35px; border-radius: 8px; background: {{ section.settings.button_color }}; color: white; text-decoration: none; font-size: 1.1rem;">
+    {{ section.settings.button_text }}
+  </a>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "بانر رئيسي",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "صورة البانر"
+    },
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "العنوان الرئيسي",
+      "default": "عنوان البانر"
+    },
+    {
+      "type": "text",
+      "id": "banner_subtitle",
+      "label": "وصف البانر",
+      "default": "وصف يظهر تحت العنوان"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "نص الزر",
+      "default": "تسوق الآن"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "رابط الزر"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "لون الزر",
+      "default": "#000000"
+    }
+  ]
+}
+{% endschema %}
