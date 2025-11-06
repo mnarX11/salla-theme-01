@@ -1,0 +1,12 @@
+[
+  {
+    "name": "الرئيسية",
+    "settings": [],
+    "blocks": [],
+    "default": [
+      {
+        "type": "hero-banner"
+      }
+    ]
+  }
+]
