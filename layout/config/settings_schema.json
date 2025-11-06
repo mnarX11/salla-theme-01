@@ -1,0 +1,19 @@
+[
+  {
+    "name": "إعدادات الصفحة الرئيسية",
+    "settings": [
+      {
+        "type": "text",
+        "id": "welcome_message",
+        "label": "رسالة الترحيب",
+        "default": "مرحبا بكم في متجري"
+      },
+      {
+        "type": "color",
+        "id": "theme_color",
+        "label": "اللون الأساسي للمتجر",
+        "default": "#000000"
+      }
+    ]
+  }
+]
